@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../core/configs/scale_size.dart';
+
 class MainButtonComponent extends StatelessWidget {
   String buttonText;
   VoidCallback callback;
@@ -26,6 +28,7 @@ class MainButtonComponent extends StatelessWidget {
             fontWeight: FontWeight.w500,
             color: Colors.white,
           ),
+          textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
         ),
       ),
     );

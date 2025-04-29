@@ -1,11 +1,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ring_pay/presentation/home/home.dart';
+import 'package:ring_pay/presentation/main_scaffold/main_scaffold.dart';
 import 'package:ring_pay/presentation/login/forgot_password.dart';
 import 'package:ring_pay/presentation/signup/signup.dart';
 
 import '../../core/configs/assets/app_vectors.dart';
+import '../../core/configs/scale_size.dart';
 import '../../core/configs/theme/app_colors.dart';
 import '../widgets/main_button_component.dart';
 import '../widgets/textfield_component.dart';
@@ -107,8 +108,8 @@ class _LogInScreenState extends State<LogInScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 17),
                         child: SvgPicture.asset(
                           _obscureText ? AppVectors.eye : AppVectors.eyeOff,
-                          width: 22,
-                          height: 22,
+                          width: 21,
+                          height: 21,
                         ),
                       ),
                     ),
@@ -146,7 +147,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => HomeScreen(),
+                        builder: (BuildContext context) => MainScaffold(),
                       ),
                       (Route<dynamic> route) => false,
                     );
@@ -203,6 +204,9 @@ class _LogInScreenState extends State<LogInScreen> {
                               fontSize: 17,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
+                            ),
+                            textScaler: TextScaler.linear(
+                              ScaleSize.textScaleFactor(context),
                             ),
                           ),
                         ),

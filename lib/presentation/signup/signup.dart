@@ -6,6 +6,7 @@ import 'package:ring_pay/presentation/widgets/phone_num_field.dart';
 import 'package:ring_pay/presentation/widgets/main_button_component.dart';
 import 'package:ring_pay/presentation/widgets/textfield_component.dart';
 import '../../core/configs/assets/app_vectors.dart';
+import '../../core/configs/scale_size.dart';
 import '../../core/configs/theme/app_colors.dart';
 import 'otp.dart';
 
@@ -138,8 +139,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     _obscureText
                                         ? AppVectors.eye
                                         : AppVectors.eyeOff,
-                                    width: 22,
-                                    height: 22,
+                                    width: 21,
+                                    height: 21,
                                   ),
                                 ),
                               ),
@@ -213,6 +214,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               fontSize: 17,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
+                            ),
+                            textScaler: TextScaler.linear(
+                              ScaleSize.textScaleFactor(context),
                             ),
                           ),
                         ),

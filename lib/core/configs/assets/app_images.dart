@@ -3,4 +3,8 @@ class AppImages {
 
   static const String bgOnboarding = '${basePath}bg-onboarding.png';
   static const String logoApp = '${basePath}app-logo.png';
+
+  static const String profileImage = '${basePath}profile-image.jpg';
+
+  static const String mastercardLogo = '${basePath}mastercard-logo.png';
 }

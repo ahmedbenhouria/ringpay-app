@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ring_pay/core/configs/assets/app_images.dart';
 import 'package:ring_pay/core/configs/theme/app_colors.dart';
+import '../../core/configs/scale_size.dart';
 import '../login/login.dart';
 import '../signup/signup.dart';
 import '../widgets/main_button_component.dart';
@@ -23,12 +24,7 @@ class OnboardingScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Positioned(
-                top: 0,
-                left: 0,
-                right: 0,
-                child: Image.asset(AppImages.bgOnboarding, fit: BoxFit.contain),
-              ),
+              Image.asset(AppImages.bgOnboarding, fit: BoxFit.contain),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 5, horizontal: 42),
                 child: Column(
@@ -41,6 +37,9 @@ class OnboardingScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
+                      textScaler: TextScaler.linear(
+                        ScaleSize.textScaleFactor(context),
+                      ),
                     ),
                     SizedBox(height: size.height * 0.005),
                     Text(
@@ -49,6 +48,9 @@ class OnboardingScreen extends StatelessWidget {
                         fontSize: 14,
                         color: Colors.grey,
                         fontWeight: FontWeight.w400,
+                      ),
+                      textScaler: TextScaler.linear(
+                        ScaleSize.textScaleFactor(context),
                       ),
                     ),
                     SizedBox(height: size.height * 0.025),
@@ -76,6 +78,9 @@ class OnboardingScreen extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           ),
                           textAlign: TextAlign.start,
+                          textScaler: TextScaler.linear(
+                            ScaleSize.textScaleFactor(context),
+                          ),
                         ),
                         GestureDetector(
                           onTap: () {
@@ -95,6 +100,9 @@ class OnboardingScreen extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                             ),
                             textAlign: TextAlign.start,
+                            textScaler: TextScaler.linear(
+                              ScaleSize.textScaleFactor(context),
+                            ),
                           ),
                         ),
                       ],

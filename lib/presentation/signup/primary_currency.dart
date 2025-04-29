@@ -2,8 +2,6 @@ import 'package:country_currency_pickers/country.dart';
 import 'package:country_currency_pickers/currency_picker_dropdown.dart';
 import 'package:country_currency_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:ring_pay/presentation/signup/transaction_pin.dart';
-
 import '../../core/configs/theme/app_colors.dart';
 import '../widgets/main_button_component.dart';
 
@@ -20,7 +18,10 @@ class PrimaryCurrencyScreen extends StatelessWidget {
         ),
       ),
       SizedBox(width: 8.0),
-      Text("${country.currencyCode}"),
+      Text(
+        "${country.currencyCode}",
+        style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xff404040)),
+      ),
     ],
   );
 
@@ -90,7 +91,7 @@ class PrimaryCurrencyScreen extends StatelessWidget {
                                 ),
                               ),
                               child: CurrencyPickerDropdown(
-                                initialValue: 'NGN',
+                                initialValue: 'GBP',
                                 itemBuilder: _buildCurrencyDropdownItem,
                                 onValuePicked: (Country? country) {
                                   print("${country?.name}");

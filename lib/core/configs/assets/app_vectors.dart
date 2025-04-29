@@ -24,4 +24,27 @@ class AppVectors {
 
   static const String person = '${basePath}person$format';
   static const String bankNotes = '${basePath}bank-notes$format';
+
+  static const String close = '${basePath}close$format';
+  static const String profile = '${basePath}profile$format';
+  static const String settings = '${basePath}settings$format';
+  static const String logout = '${basePath}logout$format';
+
+  static const String copy = '${basePath}copy$format';
+  static const String copyDetails = '${basePath}copy-details$format';
+
+  static const String mastercard = '${basePath}mastercard$format';
+  static const String rectangle1 = '${basePath}rectangle4$format';
+  static const String rectangle2 = '${basePath}rectangle5$format';
+
+  static const String layerBlur = '${basePath}layer-blur$format';
+
+  static const String details = '${basePath}details$format';
+  static const String plus = '${basePath}plus$format';
+  static const String freeze = '${basePath}freeze$format';
+  static const String more = '${basePath}more$format';
+
+  static const String calendar = '${basePath}calendar$format';
+
+  static const String line = '${basePath}line$format';
 }
