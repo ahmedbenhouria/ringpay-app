@@ -1,16 +1,5 @@
-# ring_pay
+# 💳 RingPay – Fintech App UI Kit
 
-A new Flutter project.
+RingPay is a Fintech App UI Kit that helps you kickstart your mobile financial application with ease. With a collection of responsive, reusable, and modern UI components...
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![mockup-ui-kit](https://github.com/user-attachments/assets/d85bf542-678f-4897-b03c-d0e339b0af2e)
