@@ -3,4 +3,4 @@
 RingPay is a Fintech App UI Kit that helps you kickstart your mobile financial application with ease. With a collection of responsive, reusable, and modern UI components.
 <br>
 # Cover
-![cover](https://github.com/user-attachments/assets/3e290ba6-e174-4158-b20e-5998fd6c5797)
+<img width="2774" alt="cover" src="https://github.com/user-attachments/assets/e0cf0759-3f18-487c-93e0-bd6c2f6e3017" />
