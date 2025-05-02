@@ -17,7 +17,7 @@ class PrimaryCurrencyScreen extends StatelessWidget {
           child: CountryPickerUtils.getDefaultFlagImage(country),
         ),
       ),
-      SizedBox(width: 8.0),
+      SizedBox(width: 7.0),
       Text(
         "${country.currencyCode}",
         style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xff404040)),

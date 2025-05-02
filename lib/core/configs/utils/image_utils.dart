@@ -1,6 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'assets/app_vectors.dart';
+import '../assets/app_vectors.dart';
 
 class ImageUtils {
   static void svgPrecacheImage() {

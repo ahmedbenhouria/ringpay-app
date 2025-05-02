@@ -4,10 +4,10 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../core/configs/assets/app_vectors.dart';
 
-class CreditCardComponent extends StatelessWidget {
+class CreditCardComponent2 extends StatelessWidget {
   VoidCallback? callback;
 
-  CreditCardComponent({this.callback, super.key});
+  CreditCardComponent2({this.callback, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,36 +17,30 @@ class CreditCardComponent extends StatelessWidget {
         height: 206,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Color(0xff19191B),
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: <Color>[Color(0xff1F1F3A), Color(0xff1D1D27)],
+          ),
         ),
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 19),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Subscriptions',
-                        style: TextStyle(
-                          color: Color(0xffD7D7D7),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SvgPicture.asset(
-                        AppVectors.mastercard,
-                        width: 30,
-                        height: 30,
-                      ),
-                    ],
+                  Text(
+                    'Subscriptions',
+                    style: TextStyle(
+                      color: Color(0xffD7D7D7),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 18, right: 12),
+                    padding: EdgeInsets.only(top: 18, right: 55),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -83,15 +77,17 @@ class CreditCardComponent extends StatelessWidget {
                       ],
                     ),
                   ),
-                  AutoSizeText(
-                    '****  ****  ****  7876',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
+                  Padding(
+                    padding: const EdgeInsets.only(right: 38),
+                    child: AutoSizeText(
+                      '****  ****  ****  7876',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      presetFontSizes: [28.7, 27],
+                      maxLines: 1,
                     ),
-                    minFontSize: 14,
-                    presetFontSizes: [33, 31],
-                    maxLines: 1,
                   ),
                   Spacer(),
                   Row(
@@ -166,14 +162,19 @@ class CreditCardComponent extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 9,
+              top: 0,
               right: 0,
-              child: SvgPicture.asset(AppVectors.rectangle2),
+              child: SvgPicture.asset(AppVectors.rectangle3),
             ),
             Positioned(
-              top: 27,
+              top: 0,
               right: 0,
-              child: SvgPicture.asset(AppVectors.rectangle1),
+              child: SvgPicture.asset(AppVectors.rectangle4),
+            ),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: SvgPicture.asset(AppVectors.rectangle5),
             ),
           ],
         ),

@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ring_pay/core/configs/assets/app_vectors.dart';
 import 'package:ring_pay/presentation/widgets/credit_card_component.dart';
-import '../../core/configs/scale_size.dart';
 import '../../core/configs/theme/app_colors.dart';
+import '../../core/configs/utils/scale_size.dart';
+import '../widgets/credit_card_component2.dart';
 import '../widgets/transaction_card_component.dart';
 
 class CardDetailsScreen extends StatelessWidget {
@@ -157,6 +158,19 @@ class CardDetailsScreen extends StatelessWidget {
     );
   }
 
+  Widget _buildCardComponent(String tag, BuildContext context) {
+    callback() {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => CardDetailsScreen(tag: tag)),
+      );
+    }
+
+    return tag == 'card_1'
+        ? CreditCardComponent(callback: callback)
+        : CreditCardComponent2(callback: callback);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -184,7 +198,10 @@ class CardDetailsScreen extends StatelessWidget {
                   tag: tag,
                   child: Material(
                     type: MaterialType.transparency,
-                    child: CreditCardComponent(),
+                    child: Material(
+                      type: MaterialType.transparency,
+                      child: _buildCardComponent(tag, context),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 8),

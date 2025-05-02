@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/configs/scale_size.dart';
+import '../../core/configs/utils/scale_size.dart';
 
 class MainButtonComponent extends StatelessWidget {
   String buttonText;

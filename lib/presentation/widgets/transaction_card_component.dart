@@ -11,14 +11,21 @@ class TransactionCardComponent extends StatelessWidget {
   String iconPath;
   Color bgColor;
 
-  TransactionCardComponent({ required this.transactionLabel, required this.transactionAmount,
-      required this.amountTextColor, required this.timestamp, required this.iconPath, required this.bgColor, super.key});
+  TransactionCardComponent({
+    required this.transactionLabel,
+    required this.transactionAmount,
+    required this.amountTextColor,
+    required this.timestamp,
+    required this.iconPath,
+    required this.bgColor,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 88,
+      height: 82,
       child: Card(
         elevation: 0.0,
         color: AppColors.greyBackground,
@@ -60,8 +67,8 @@ class TransactionCardComponent extends StatelessWidget {
                           Text(
                             transactionLabel,
                             style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 14.5,
+                              fontWeight: FontWeight.w700,
                               color: Colors.black,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -75,8 +82,8 @@ class TransactionCardComponent extends StatelessWidget {
               Text(
                 transactionAmount,
                 style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
                   color: amountTextColor,
                 ),
               ),

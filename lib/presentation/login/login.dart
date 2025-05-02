@@ -6,8 +6,8 @@ import 'package:ring_pay/presentation/login/forgot_password.dart';
 import 'package:ring_pay/presentation/signup/signup.dart';
 
 import '../../core/configs/assets/app_vectors.dart';
-import '../../core/configs/scale_size.dart';
 import '../../core/configs/theme/app_colors.dart';
+import '../../core/configs/utils/scale_size.dart';
 import '../widgets/main_button_component.dart';
 import '../widgets/textfield_component.dart';
 

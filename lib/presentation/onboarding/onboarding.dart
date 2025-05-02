@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ring_pay/core/configs/assets/app_images.dart';
 import 'package:ring_pay/core/configs/theme/app_colors.dart';
-import '../../core/configs/scale_size.dart';
+import '../../core/configs/utils/scale_size.dart';
 import '../login/login.dart';
 import '../signup/signup.dart';
 import '../widgets/main_button_component.dart';

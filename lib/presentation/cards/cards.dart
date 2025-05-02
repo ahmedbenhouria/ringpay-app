@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:ring_pay/presentation/cards/card_details.dart';
 import 'package:ring_pay/presentation/widgets/credit_card_component.dart';
 
-import '../../core/configs/scale_size.dart';
 import '../../core/configs/theme/app_colors.dart';
+import '../../core/configs/utils/scale_size.dart';
+import '../widgets/credit_card_component2.dart';
 
 class CardsScreen extends StatelessWidget {
   const CardsScreen({super.key});
@@ -25,13 +26,26 @@ class CardsScreen extends StatelessWidget {
           ),
         ),
       ),
-      SizedBox(width: 8.0),
+      SizedBox(width: 7.0),
       Text(
         "${country.currencyCode}",
         style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xff404040)),
       ),
     ],
   );
+
+  Widget _buildCardComponent(int index, String tag, BuildContext context) {
+    callback() {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => CardDetailsScreen(tag: tag)),
+      );
+    }
+
+    return index == 0
+        ? CreditCardComponent(callback: callback)
+        : CreditCardComponent2(callback: callback);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -105,16 +119,7 @@ class CardsScreen extends StatelessWidget {
                     tag: tag,
                     child: Material(
                       type: MaterialType.transparency,
-                      child: CreditCardComponent(
-                        callback: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => CardDetailsScreen(tag: tag),
-                            ),
-                          );
-                        },
-                      ),
+                      child: _buildCardComponent(index, tag, context),
                     ),
                   ),
                 );

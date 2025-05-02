@@ -6,8 +6,8 @@ import 'package:ring_pay/presentation/widgets/phone_num_field.dart';
 import 'package:ring_pay/presentation/widgets/main_button_component.dart';
 import 'package:ring_pay/presentation/widgets/textfield_component.dart';
 import '../../core/configs/assets/app_vectors.dart';
-import '../../core/configs/scale_size.dart';
 import '../../core/configs/theme/app_colors.dart';
+import '../../core/configs/utils/scale_size.dart';
 import 'otp.dart';
 
 class SignUpScreen extends StatefulWidget {

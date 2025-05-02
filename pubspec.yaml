@@ -18,8 +18,9 @@ dependencies:
   flutter_native_splash: ^2.4.6
   intl_phone_field: ^3.2.0
   country_currency_pickers: ^3.0.0
-  blurrycontainer: ^2.1.0
   flutter_screenutil: ^5.9.3
+  auto_size_text: ^3.0.0
+  dotted_border: ^2.1.0
 
 dev_dependencies:
   flutter_test:

@@ -37,6 +37,10 @@ class AppVectors {
   static const String rectangle1 = '${basePath}rectangle4$format';
   static const String rectangle2 = '${basePath}rectangle5$format';
 
+  static const String rectangle3 = '${basePath}rectangle6$format';
+  static const String rectangle4 = '${basePath}rectangle7$format';
+  static const String rectangle5 = '${basePath}rectangle8$format';
+
   static const String layerBlur = '${basePath}layer-blur$format';
 
   static const String details = '${basePath}details$format';
@@ -47,4 +51,8 @@ class AppVectors {
   static const String calendar = '${basePath}calendar$format';
 
   static const String line = '${basePath}line$format';
+
+  static const String circlesBg = '${basePath}circles-bg$format';
+
+  static const String arrowUpRight = '${basePath}arrow-up-right$format';
 }

@@ -5,7 +5,7 @@ import 'package:ring_pay/core/configs/assets/app_vectors.dart';
 import 'package:ring_pay/core/configs/theme/app_colors.dart';
 import 'package:ring_pay/presentation/transactions/transactions.dart';
 
-import '../../core/configs/scale_size.dart';
+import '../../core/configs/utils/scale_size.dart';
 import '../accounts/accounts.dart';
 import '../cards/cards.dart';
 import '../home/home.dart';
@@ -19,6 +19,17 @@ class MainScaffold extends StatefulWidget {
 
 class _MainScaffoldState extends State<MainScaffold> {
   int currentIndex = 0;
+
+  Widget _customListTile(Widget listTileChild) {
+    return InkWell(
+      customBorder: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(13),
+      ),
+      onTap: () {},
+      splashColor: AppColors.grey.withOpacity(0.08),
+      child: listTileChild,
+    );
+  }
 
   Widget _appBar(BuildContext context) {
     return AppBar(
@@ -234,83 +245,95 @@ class _MainScaffoldState extends State<MainScaffold> {
               padding: EdgeInsets.symmetric(horizontal: 11),
               child: Column(
                 children: [
-                  ListTile(
-                    minLeadingWidth: 15,
-                    leading: SvgPicture.asset(
-                      AppVectors.expenses,
-                      width: 14,
-                      height: 14,
-                    ),
-                    title: const Text(
-                      'Expenses',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
+                  _customListTile(
+                    ListTile(
+                      minLeadingWidth: 15,
+                      leading: SvgPicture.asset(
+                        AppVectors.expenses,
+                        width: 14,
+                        height: 14,
+                      ),
+                      title: const Text(
+                        'Expenses',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  ListTile(
-                    minLeadingWidth: 15,
-                    leading: SvgPicture.asset(
-                      AppVectors.virtualCard,
-                      width: 16,
-                      height: 16,
-                    ),
-                    title: const Text(
-                      'Payment',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
+                  _customListTile(
+                    ListTile(
+                      minLeadingWidth: 15,
+                      leading: SvgPicture.asset(
+                        AppVectors.virtualCard,
+                        width: 16,
+                        height: 16,
+                      ),
+                      title: const Text(
+                        'Payment',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  ListTile(
-                    minLeadingWidth: 15,
-                    leading: SvgPicture.asset(
-                      AppVectors.payroll,
-                      width: 19,
-                      height: 19,
-                    ),
-                    title: const Text(
-                      'Payroll',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
+
+                  _customListTile(
+                    ListTile(
+                      minLeadingWidth: 15,
+                      leading: SvgPicture.asset(
+                        AppVectors.payroll,
+                        width: 19,
+                        height: 19,
+                      ),
+                      title: const Text(
+                        'Payroll',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  ListTile(
-                    minLeadingWidth: 15,
-                    leading: SvgPicture.asset(
-                      AppVectors.profile,
-                      width: 17,
-                      height: 17,
-                    ),
-                    title: const Text(
-                      'Profile',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
+
+                  _customListTile(
+                    ListTile(
+                      minLeadingWidth: 15,
+                      leading: SvgPicture.asset(
+                        AppVectors.profile,
+                        width: 17,
+                        height: 17,
+                      ),
+                      title: const Text(
+                        'Profile',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  ListTile(
-                    minLeadingWidth: 15,
-                    leading: SvgPicture.asset(
-                      AppVectors.settings,
-                      width: 19,
-                      height: 19,
-                    ),
-                    title: const Text(
-                      'Settings',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
+                  _customListTile(
+                    ListTile(
+                      minLeadingWidth: 15,
+                      leading: SvgPicture.asset(
+                        AppVectors.settings,
+                        width: 19,
+                        height: 19,
+                      ),
+                      title: const Text(
+                        'Settings',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
@@ -319,21 +342,23 @@ class _MainScaffoldState extends State<MainScaffold> {
             ),
 
             Spacer(),
-            Padding(
-              padding: const EdgeInsets.only(left: 11, bottom: 40),
-              child: ListTile(
-                minLeadingWidth: 15,
-                leading: SvgPicture.asset(
-                  AppVectors.logout,
-                  width: 16,
-                  height: 16,
-                ),
-                title: const Text(
-                  'Logout',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xff707070),
+            Container(
+              margin: const EdgeInsets.only(left: 11, bottom: 40, right: 11),
+              child: _customListTile(
+                ListTile(
+                  minLeadingWidth: 1,
+                  leading: SvgPicture.asset(
+                    AppVectors.logout,
+                    width: 16,
+                    height: 16,
+                  ),
+                  title: const Text(
+                    'Logout',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xff707070),
+                    ),
                   ),
                 ),
               ),
@@ -342,6 +367,73 @@ class _MainScaffoldState extends State<MainScaffold> {
         ),
       ),
     );
+  }
+
+  Widget _floatingActionButton(String buttonText, VoidCallback callback) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 7),
+      child: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xff25B14F).withOpacity(0.6),
+              spreadRadius: 1,
+              blurRadius: 8,
+              offset: Offset(0, 4),
+            ),
+          ],
+          borderRadius: BorderRadius.circular(25),
+        ),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xff25B14F),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 12),
+            elevation: 0, // because shadow is handled by BoxDecoration
+          ),
+          onPressed: callback,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                AppVectors.plus,
+                width: 23,
+                height: 23,
+                colorFilter: const ColorFilter.mode(
+                  Colors.white,
+                  BlendMode.srcIn,
+                ),
+              ),
+              const SizedBox(width: 7),
+              Text(
+                buttonText,
+                style: const TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+                textScaler: TextScaler.linear(
+                  ScaleSize.textScaleFactor(context),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget? _buildFAB() {
+    if (currentIndex == 1) {
+      return _floatingActionButton('New Card', () {});
+    } else if (currentIndex == 2) {
+      return _floatingActionButton('New Account', () {});
+    } else {
+      return null;
+    }
   }
 
   @override
@@ -359,61 +451,7 @@ class _MainScaffoldState extends State<MainScaffold> {
         preferredSize: const Size.fromHeight(69.0),
         child: _appBar(context),
       ),
-      floatingActionButton:
-          currentIndex == 1
-              ? Padding(
-                padding: const EdgeInsets.only(bottom: 7),
-                child: SizedBox(
-                  width: 168,
-                  height: 51,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0xff25B14F).withOpacity(0.6),
-                          spreadRadius: 1,
-                          blurRadius: 8,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff25B14F),
-                      ),
-                      onPressed: () {},
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(
-                            AppVectors.plus,
-                            width: 23,
-                            height: 23,
-                            colorFilter: ColorFilter.mode(
-                              Colors.white,
-                              BlendMode.srcIn,
-                            ),
-                          ),
-                          SizedBox(width: 7),
-                          Text(
-                            'New Card',
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                            ),
-                            textScaler: TextScaler.linear(
-                              ScaleSize.textScaleFactor(context),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              )
-              : null,
+      floatingActionButton: _buildFAB(),
       drawer: _appDrawer(),
       bottomNavigationBar: _appBottomNavBar(context),
       body: screensList[currentIndex],
