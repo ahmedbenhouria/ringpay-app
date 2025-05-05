@@ -6,6 +6,7 @@ UI design reference: [RingPay App Figma Design](https://www.figma.com/community/
 <br>
 # Cover
 <img width="2774" alt="cover" src="https://github.com/user-attachments/assets/e0cf0759-3f18-487c-93e0-bd6c2f6e3017" />
+<br>
 # Getting Started
 
 1. Clone this repository.
