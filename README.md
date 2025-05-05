@@ -1,5 +1,5 @@
-# 💳 RingPay – Fintech App UI Kit
-
+# 🌐 Overview
+ 
 RingPay is a Fintech App UI Kit that helps you kickstart your mobile financial application with ease. With a collection of responsive, reusable, and modern UI components.
 
 UI design reference: [RingPay App Figma Design](https://www.figma.com/community/file/1352353981960707574).
