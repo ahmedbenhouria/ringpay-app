@@ -4,10 +4,10 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../core/configs/assets/app_vectors.dart';
 
-class CreditCardComponent2 extends StatelessWidget {
-  VoidCallback? callback;
+class CreditCardWidget2 extends StatelessWidget {
+  final VoidCallback? callback;
 
-  CreditCardComponent2({this.callback, super.key});
+  const CreditCardWidget2({super.key, this.callback});
 
   @override
   Widget build(BuildContext context) {

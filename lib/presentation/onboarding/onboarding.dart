@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ring_pay/core/configs/assets/app_images.dart';
 import 'package:ring_pay/core/configs/theme/app_colors.dart';
+import 'package:ring_pay/presentation/widgets/main_button_widget.dart';
 import '../../core/configs/utils/scale_size.dart';
 import '../login/login.dart';
 import '../signup/signup.dart';
-import '../widgets/main_button_component.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -54,7 +54,7 @@ class OnboardingScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: size.height * 0.025),
-                    MainButtonComponent(
+                    MainButtonWidget(
                       buttonText: "Create Account",
                       callback: () {
                         Navigator.push(

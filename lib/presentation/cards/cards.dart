@@ -3,11 +3,10 @@ import 'package:country_currency_pickers/currency_picker_dropdown.dart';
 import 'package:country_currency_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:ring_pay/presentation/cards/card_details.dart';
-import 'package:ring_pay/presentation/widgets/credit_card_component.dart';
-
+import 'package:ring_pay/presentation/widgets/credit_card_widget.dart';
+import 'package:ring_pay/presentation/widgets/credit_card_widget2.dart';
 import '../../core/configs/theme/app_colors.dart';
 import '../../core/configs/utils/scale_size.dart';
-import '../widgets/credit_card_component2.dart';
 
 class CardsScreen extends StatelessWidget {
   const CardsScreen({super.key});
@@ -43,8 +42,8 @@ class CardsScreen extends StatelessWidget {
     }
 
     return index == 0
-        ? CreditCardComponent(callback: callback)
-        : CreditCardComponent2(callback: callback);
+        ? CreditCardWidget(callback: callback)
+        : CreditCardWidget2(callback: callback);
   }
 
   @override

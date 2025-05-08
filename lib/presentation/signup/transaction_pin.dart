@@ -4,7 +4,7 @@ import 'package:ring_pay/core/configs/assets/app_vectors.dart';
 import 'package:ring_pay/presentation/signup/primary_currency.dart';
 
 import '../../core/configs/theme/app_colors.dart';
-import '../widgets/main_button_component.dart';
+import '../widgets/main_button_widget.dart';
 
 class TransactionPinScreen extends StatefulWidget {
   const TransactionPinScreen({super.key});
@@ -149,7 +149,7 @@ class _TransactionPinScreenState extends State<TransactionPinScreen> {
             ),
 
             SizedBox(height: 40),
-            MainButtonComponent(
+            MainButtonWidget(
               buttonText: "Set Pin",
               callback: () {
                 Navigator.push(

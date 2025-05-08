@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../core/configs/utils/scale_size.dart';
 
-class MainButtonComponent extends StatelessWidget {
-  String buttonText;
-  VoidCallback callback;
+class MainButtonWidget extends StatelessWidget {
+  final String buttonText;
+  final VoidCallback callback;
 
-  MainButtonComponent({
+  const MainButtonWidget({
     super.key,
     required this.buttonText,
     required this.callback,

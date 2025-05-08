@@ -11,7 +11,7 @@ import '../../core/configs/utils/scale_size.dart';
 class AccountsScreen extends StatelessWidget {
   const AccountsScreen({super.key});
 
-  Widget _buildBankAccountItem(Widget accountTypeChild, VoidCallback callback) {
+  Widget _bankAccountCard(Widget accountTypeChild, VoidCallback callback) {
     return InkWell(
       onTap: callback,
       child: DottedBorder(
@@ -170,7 +170,7 @@ class AccountsScreen extends StatelessWidget {
             Column(
               spacing: 15,
               children: [
-                _buildBankAccountItem(
+                _bankAccountCard(
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -197,7 +197,7 @@ class AccountsScreen extends StatelessWidget {
                     );
                   },
                 ),
-                _buildBankAccountItem(
+                _bankAccountCard(
                   DottedBorder(
                     color: Color(0xffD7D7D7),
                     strokeWidth: 1,
@@ -235,7 +235,7 @@ class AccountsScreen extends StatelessWidget {
                     );
                   },
                 ),
-                _buildBankAccountItem(
+                _bankAccountCard(
                   DottedBorder(
                     color: Color(0xffD7D7D7),
                     strokeWidth: 1,

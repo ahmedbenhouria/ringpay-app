@@ -2,11 +2,11 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ring_pay/core/configs/assets/app_vectors.dart';
-import 'package:ring_pay/presentation/widgets/credit_card_component.dart';
+import 'package:ring_pay/presentation/widgets/transaction_card_widget.dart';
 import '../../core/configs/theme/app_colors.dart';
 import '../../core/configs/utils/scale_size.dart';
-import '../widgets/credit_card_component2.dart';
-import '../widgets/transaction_card_component.dart';
+import '../widgets/credit_card_widget.dart';
+import '../widgets/credit_card_widget2.dart';
 
 class CardDetailsScreen extends StatelessWidget {
   final String tag;
@@ -167,8 +167,8 @@ class CardDetailsScreen extends StatelessWidget {
     }
 
     return tag == 'card_1'
-        ? CreditCardComponent(callback: callback)
-        : CreditCardComponent2(callback: callback);
+        ? CreditCardWidget(callback: callback)
+        : CreditCardWidget2(callback: callback);
   }
 
   @override
@@ -264,7 +264,7 @@ class CardDetailsScreen extends StatelessWidget {
                 child: Column(
                   spacing: 11,
                   children: [
-                    TransactionCardComponent(
+                    TransactionCardWidget(
                       transactionLabel: 'Payroll',
                       transactionAmount: '\$7,200',
                       amountTextColor: AppColors.red,
@@ -272,7 +272,7 @@ class CardDetailsScreen extends StatelessWidget {
                       iconPath: AppVectors.person,
                       bgColor: const Color(0xffD9D8F7),
                     ),
-                    TransactionCardComponent(
+                    TransactionCardWidget(
                       transactionLabel: 'Payroll',
                       transactionAmount: '\$7,200',
                       amountTextColor: AppColors.red,
@@ -280,7 +280,7 @@ class CardDetailsScreen extends StatelessWidget {
                       iconPath: AppVectors.person,
                       bgColor: const Color(0xffD9D8F7),
                     ),
-                    TransactionCardComponent(
+                    TransactionCardWidget(
                       transactionLabel: 'Expenses',
                       transactionAmount: '\$910',
                       amountTextColor: AppColors.red,
@@ -288,7 +288,7 @@ class CardDetailsScreen extends StatelessWidget {
                       iconPath: AppVectors.bankNotes,
                       bgColor: const Color(0xffF9EEBA),
                     ),
-                    TransactionCardComponent(
+                    TransactionCardWidget(
                       transactionLabel: 'Fund Wallet',
                       transactionAmount: '\$310',
                       amountTextColor: AppColors.primary,
@@ -296,7 +296,7 @@ class CardDetailsScreen extends StatelessWidget {
                       iconPath: AppVectors.bankNotes,
                       bgColor: const Color(0xffF9EEBA),
                     ),
-                    TransactionCardComponent(
+                    TransactionCardWidget(
                       transactionLabel: 'Receive Fund',
                       transactionAmount: '\$350',
                       amountTextColor: AppColors.primary,

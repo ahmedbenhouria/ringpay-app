@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:ring_pay/presentation/widgets/main_button_widget.dart';
+import 'package:ring_pay/presentation/widgets/textfield_widget.dart';
 
 import '../../core/configs/theme/app_colors.dart';
 import '../signup/transaction_pin.dart';
-import '../widgets/main_button_component.dart';
-import '../widgets/textfield_component.dart';
 import 'login.dart';
 
 class ForgotPassword extends StatefulWidget {
@@ -77,13 +77,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ),
 
                 SizedBox(height: 23),
-                TextFieldComponent(
-                  hintText: "Email",
-                  controller: emailController,
-                ),
+                TextFieldWidget(hintText: "Email", controller: emailController),
 
                 SizedBox(height: 23),
-                MainButtonComponent(
+                MainButtonWidget(
                   buttonText: "Continue",
                   callback: () {
                     Navigator.push(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ring_pay/presentation/signup/transaction_pin.dart';
+import 'package:ring_pay/presentation/widgets/main_button_widget.dart';
 
 import '../../core/configs/theme/app_colors.dart';
-import '../widgets/main_button_component.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -117,7 +117,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     ),
                   ),
                 ),
-                MainButtonComponent(
+                MainButtonWidget(
                   buttonText: "Continue",
                   callback: () {
                     Navigator.push(

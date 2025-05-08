@@ -2,8 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ring_pay/presentation/widgets/transaction_card_component.dart';
-
+import 'package:ring_pay/presentation/widgets/transaction_card_widget.dart';
 import '../../core/configs/assets/app_vectors.dart';
 import '../../core/configs/theme/app_colors.dart';
 
@@ -263,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     spacing: 11,
                     children: [
-                      TransactionCardComponent(
+                      TransactionCardWidget(
                         transactionLabel: 'Payroll',
                         transactionAmount: '\$7,200',
                         amountTextColor: AppColors.red,
@@ -272,7 +271,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         bgColor: Color(0xffD9D8F7),
                       ),
 
-                      TransactionCardComponent(
+                      TransactionCardWidget(
                         transactionLabel: 'Payroll',
                         transactionAmount: '\$7,200',
                         amountTextColor: AppColors.red,
@@ -281,7 +280,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         bgColor: Color(0xffD9D8F7),
                       ),
 
-                      TransactionCardComponent(
+                      TransactionCardWidget(
                         transactionLabel: 'Expenses',
                         transactionAmount: '\$910',
                         amountTextColor: AppColors.red,
@@ -290,7 +289,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         bgColor: Color(0xffF9EEBA),
                       ),
 
-                      TransactionCardComponent(
+                      TransactionCardWidget(
                         transactionLabel: 'Fund Wallet',
                         transactionAmount: '\$310',
                         amountTextColor: AppColors.primary,
@@ -299,7 +298,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         bgColor: Color(0xffF9EEBA),
                       ),
 
-                      TransactionCardComponent(
+                      TransactionCardWidget(
                         transactionLabel: 'Receive Fund',
                         transactionAmount: '\$350',
                         amountTextColor: AppColors.primary,

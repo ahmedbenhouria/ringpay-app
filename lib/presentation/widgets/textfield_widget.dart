@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TextFieldComponent extends StatefulWidget {
-  String hintText;
-  bool? obscureText;
-  TextEditingController controller;
+class TextFieldWidget extends StatefulWidget {
+  final String hintText;
+  final bool? obscureText;
+  final TextEditingController controller;
   final Widget? child;
 
-  TextFieldComponent({
+  const TextFieldWidget({
     super.key,
     required this.hintText,
     this.obscureText,
@@ -15,10 +15,10 @@ class TextFieldComponent extends StatefulWidget {
   });
 
   @override
-  State<TextFieldComponent> createState() => _TextFieldComponentState();
+  State<TextFieldWidget> createState() => _TextFieldWidgetState();
 }
 
-class _TextFieldComponentState extends State<TextFieldComponent> {
+class _TextFieldWidgetState extends State<TextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     return TextField(

@@ -2,12 +2,12 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ring_pay/presentation/login/login.dart';
-import 'package:ring_pay/presentation/widgets/phone_num_field.dart';
-import 'package:ring_pay/presentation/widgets/main_button_component.dart';
-import 'package:ring_pay/presentation/widgets/textfield_component.dart';
+import 'package:ring_pay/presentation/widgets/main_button_widget.dart';
+import 'package:ring_pay/presentation/widgets/textfield_widget.dart';
 import '../../core/configs/assets/app_vectors.dart';
 import '../../core/configs/theme/app_colors.dart';
 import '../../core/configs/utils/scale_size.dart';
+import '../widgets/phone_numfield_widget.dart';
 import 'otp.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -102,29 +102,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                           ),
                           SizedBox(height: 30),
-                          TextFieldComponent(
+                          TextFieldWidget(
                             hintText: "First Name",
                             controller: firstNameController,
                           ),
 
                           SizedBox(height: 23),
-                          TextFieldComponent(
+                          TextFieldWidget(
                             hintText: "Last Name",
                             controller: firstNameController,
                           ),
 
                           SizedBox(height: 23),
-                          TextFieldComponent(
+                          TextFieldWidget(
                             hintText: "Email",
                             controller: emailController,
                           ),
 
                           SizedBox(height: 23),
-                          phoneNumberTextField(context),
+                          PhoneNumFieldWidget(),
 
                           SizedBox(height: 8),
                           // Password TextField //
-                          TextFieldComponent(
+                          TextFieldWidget(
                             hintText: "Password",
                             controller: passwordController,
                             obscureText: _obscureText,
@@ -148,7 +148,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
 
                           SizedBox(height: 23),
-                          MainButtonComponent(
+                          MainButtonWidget(
                             buttonText: "Create Account",
                             callback: () {
                               Navigator.push(

@@ -3,7 +3,7 @@ import 'package:country_currency_pickers/currency_picker_dropdown.dart';
 import 'package:country_currency_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
 import '../../core/configs/theme/app_colors.dart';
-import '../widgets/main_button_component.dart';
+import '../widgets/main_button_widget.dart';
 
 class PrimaryCurrencyScreen extends StatelessWidget {
   const PrimaryCurrencyScreen({super.key});
@@ -107,7 +107,7 @@ class PrimaryCurrencyScreen extends StatelessWidget {
                 SizedBox(height: 22),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: MainButtonComponent(
+                  child: MainButtonWidget(
                     buttonText: "Set Currency",
                     callback: () {
                       Navigator.push(

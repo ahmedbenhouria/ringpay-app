@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ring_pay/core/configs/assets/app_images.dart';
 import 'package:ring_pay/core/configs/theme/app_colors.dart';
-
 import '../../core/configs/assets/app_vectors.dart';
-import '../widgets/transaction_card_component.dart';
+import '../widgets/transaction_card_widget.dart';
 
 class AccountDetailsScreen extends StatelessWidget {
   const AccountDetailsScreen({super.key});
@@ -19,15 +18,15 @@ class AccountDetailsScreen extends StatelessWidget {
   ) {
     return Container(
       width: 165,
-      height: 170,
-      margin: const EdgeInsets.symmetric(horizontal: 7, vertical: 12),
+      height: 172,
+      margin: const EdgeInsets.symmetric(horizontal: 7, vertical: 11.5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: Colors.white,
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 4,
+            spreadRadius: 1.5,
             blurRadius: 8,
             offset: const Offset(6, 4), // Shadow position
           ),
@@ -160,7 +159,7 @@ class AccountDetailsScreen extends StatelessWidget {
                               ),
                               Container(
                                 width: 142,
-                                height: 28,
+                                height: 29,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   color: Colors.white,
@@ -169,7 +168,7 @@ class AccountDetailsScreen extends StatelessWidget {
                                   child: Text(
                                     'Primary Account',
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.w600,
                                       color: Color(0xff404040),
                                     ),
@@ -252,7 +251,7 @@ class AccountDetailsScreen extends StatelessWidget {
                       Expanded(
                         child: ListView(
                           children: [
-                            TransactionCardComponent(
+                            TransactionCardWidget(
                               transactionLabel: 'Transferred Fund',
                               transactionAmount: '\$7,200',
                               amountTextColor: AppColors.red,
@@ -261,7 +260,7 @@ class AccountDetailsScreen extends StatelessWidget {
                               bgColor: const Color(0xffD9D8F7),
                             ),
                             SizedBox(height: 10),
-                            TransactionCardComponent(
+                            TransactionCardWidget(
                               transactionLabel: 'Received Fund',
                               transactionAmount: '\$350',
                               amountTextColor: AppColors.primary,
@@ -270,7 +269,7 @@ class AccountDetailsScreen extends StatelessWidget {
                               bgColor: const Color(0xffF9EEBA),
                             ),
                             SizedBox(height: 10),
-                            TransactionCardComponent(
+                            TransactionCardWidget(
                               transactionLabel: 'Facebook Ads',
                               transactionAmount: '\$910',
                               amountTextColor: AppColors.red,
@@ -279,7 +278,7 @@ class AccountDetailsScreen extends StatelessWidget {
                               bgColor: const Color(0xffF9EEBA),
                             ),
                             SizedBox(height: 10),
-                            TransactionCardComponent(
+                            TransactionCardWidget(
                               transactionLabel: 'Add Fund',
                               transactionAmount: '\$350',
                               amountTextColor: AppColors.red,

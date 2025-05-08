@@ -3,15 +3,15 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../core/configs/theme/app_colors.dart';
 
-class TransactionCardComponent extends StatelessWidget {
-  String transactionLabel;
-  String transactionAmount;
-  Color amountTextColor;
-  String timestamp;
-  String iconPath;
-  Color bgColor;
+class TransactionCardWidget extends StatelessWidget {
+  final String transactionLabel;
+  final String transactionAmount;
+  final Color amountTextColor;
+  final String timestamp;
+  final String iconPath;
+  final Color bgColor;
 
-  TransactionCardComponent({
+  const TransactionCardWidget({
     required this.transactionLabel,
     required this.transactionAmount,
     required this.amountTextColor,

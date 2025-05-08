@@ -4,12 +4,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ring_pay/presentation/main_scaffold/main_scaffold.dart';
 import 'package:ring_pay/presentation/login/forgot_password.dart';
 import 'package:ring_pay/presentation/signup/signup.dart';
+import 'package:ring_pay/presentation/widgets/main_button_widget.dart';
+import 'package:ring_pay/presentation/widgets/textfield_widget.dart';
 
 import '../../core/configs/assets/app_vectors.dart';
 import '../../core/configs/theme/app_colors.dart';
 import '../../core/configs/utils/scale_size.dart';
-import '../widgets/main_button_component.dart';
-import '../widgets/textfield_component.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
@@ -90,14 +90,11 @@ class _LogInScreenState extends State<LogInScreen> {
                   ),
                 ),
                 SizedBox(height: 23),
-                TextFieldComponent(
-                  hintText: "Email",
-                  controller: emailController,
-                ),
+                TextFieldWidget(hintText: "Email", controller: emailController),
                 // Password TextField //
                 SizedBox(height: 23),
                 // Password TextField //
-                TextFieldComponent(
+                TextFieldWidget(
                   hintText: "Password",
                   controller: passwordController,
                   obscureText: _obscureText,
@@ -141,7 +138,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 ),
 
                 SizedBox(height: 23),
-                MainButtonComponent(
+                MainButtonWidget(
                   buttonText: "Log In",
                   callback: () {
                     Navigator.pushAndRemoveUntil(
